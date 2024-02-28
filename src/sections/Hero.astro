@@ -5,17 +5,38 @@ import Button from "@/components/Button.astro";
 import WhatsAppButton from "@/components/WhatsAppButton.astro";
 ---
 
-<section
-    style="display: flex; flex-direction: column; justify-content: space-around; align-items: center; height: 100vh; "
->
+<section class="hero-section">
     <HeroLogo />
-    <div style="display: flex; justify-content: center; align-items: center;">
+    <div>
         <SocialLinks />
     </div>
-    <div style="display: flex; justify-content: center; align-items: center;">
+    <div>
         <Button />
     </div>
-    <div style="display: flex; justify-content: center; align-items: center;">
+    <div>
         <WhatsAppButton />
     </div>
 </section>
+
+<style>
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .hero-section div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0; /* Ajusta este valor según tus necesidades */
+    }
+
+    @media (max-width: 768px) {
+        .hero-section div {
+            margin: 1px 0; /* Reduce el espacio en dispositivos móviles */
+        }
+    }
+</style>
